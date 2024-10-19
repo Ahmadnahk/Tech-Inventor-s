@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Ahmadnahk/Tech-Inventor-s.git/static/css/main.7f58d0f1.css",
+    "main.js": "/Ahmadnahk/Tech-Inventor-s.git/static/js/main.1f4a2584.js",
+    "static/js/453.419a5d54.chunk.js": "/Ahmadnahk/Tech-Inventor-s.git/static/js/453.419a5d54.chunk.js",
+    "static/media/herosection.jpg": "/Ahmadnahk/Tech-Inventor-s.git/static/media/herosection.e8431ec805b230672fc9.jpg",
+    "index.html": "/Ahmadnahk/Tech-Inventor-s.git/index.html",
+    "main.7f58d0f1.css.map": "/Ahmadnahk/Tech-Inventor-s.git/static/css/main.7f58d0f1.css.map",
+    "main.1f4a2584.js.map": "/Ahmadnahk/Tech-Inventor-s.git/static/js/main.1f4a2584.js.map",
+    "453.419a5d54.chunk.js.map": "/Ahmadnahk/Tech-Inventor-s.git/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f58d0f1.css",
+    "static/js/main.1f4a2584.js"
+  ]
+}
