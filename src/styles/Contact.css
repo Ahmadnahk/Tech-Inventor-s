@@ -1,0 +1,115 @@
+/* Contact.css */
+.contact-container {
+  padding: 80px 20px;
+  background: linear-gradient(
+    135deg,
+    #6c63ff 0%,
+    #3f3f5f 100%
+  ); /* Gradient background */
+  color: white; /* White text for contrast */
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.contact-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0.9; /* Slight transparency for elegance */
+}
+
+.contact-info {
+  display: flex; /* Flex layout for contact items */
+  justify-content: center; /* Center items */
+  margin-bottom: 40px; /* Space below contact info */
+}
+
+.contact-info-item {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px;
+  margin: 0 15px; /* Space between items */
+  width: auto; /* Fixed width for uniformity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+}
+
+.contact-info-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contact-form-container {
+  max-width: 600px; /* Restrict form width for better usability */
+  margin: 0 auto;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White background for the form */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  color: #2c2c54; /* Dark color for labels */
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333; /* Dark text color */
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6c63ff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+textarea {
+  resize: none; /* Allow vertical resizing only */
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  background-color: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #9997b8; /* Darker purple on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}

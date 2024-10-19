@@ -1,0 +1,89 @@
+/* Footer.css */
+.footer-container {
+  background: linear-gradient(
+    135deg,
+    #1c1c1c 0%,
+    #121212 100%
+  ); /* Gradient background */
+  color: #ffffff; /* White text */
+  padding: 60px 20px; /* Increased padding for better spacing */
+  text-align: center; /* Center align text */
+  position: relative; /* Position relative for pseudo elements */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.footer-content {
+  margin-bottom: 30px; /* Space between content and bottom */
+}
+
+.footer-title {
+  font-size: 2.4rem; /* Slightly larger title font */
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase; /* Uppercase for a professional touch */
+  letter-spacing: 1px; /* Spacing between letters */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-title:hover {
+  color: #6c63ff; /* Change color on hover */
+}
+
+.footer-description {
+  font-size: 1.1rem; /* Keep description slightly larger */
+  margin: 10px 0;
+  max-width: 600px; /* Centered with max width */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5; /* Improved line height for readability */
+  opacity: 0.9; /* Slightly transparent for elegance */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.footer-description:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle top border */
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; /* Stack items on smaller screens */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+}
+
+.footer-socials {
+  display: flex; /* Flexbox for social icons */
+  justify-content: center; /* Center the icons */
+  margin-top: 15px; /* Slight margin above icons */
+}
+
+.footer-socials a {
+  color: #ffffff; /* White color for icons */
+  margin: 0 15px; /* Space between icons */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and scale */
+  font-size: 1.8rem; /* Increased icon size for visibility */
+}
+
+.footer-socials a:hover {
+  color: #6c63ff; /* Purple color on hover for contrast */
+  transform: scale(1.2); /* Slight scale effect on hover */
+}
+
+.social-icon {
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
