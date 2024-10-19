@@ -15,7 +15,7 @@ const services = [
         image: '/images/mobiledev.png',
     },
     {
-        title: 'Web Development',
+        title: 'Web dev Development',
         description: 'We create mobile applications with stunning UI and UX.',
         image: '/images/webdev.png',
     },
