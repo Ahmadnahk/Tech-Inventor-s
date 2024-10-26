@@ -27,7 +27,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`navbar ${navBackground ? 'navbar-black' : ''}`}>
+        <nav className={`navbar ${navBackground ? 'navbar-black' : 'navbar-black'}`}>
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                     Tech Inventor's
