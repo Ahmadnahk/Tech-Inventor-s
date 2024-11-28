@@ -2,7 +2,7 @@
 .hero-container {
   position: relative;
   height: 100vh;
-  background: url("../../public/images/herosection.jpg") center center/cover
+  background: url("../herosection.jpg") center center/cover
     no-repeat;
   display: flex;
   justify-content: center;
