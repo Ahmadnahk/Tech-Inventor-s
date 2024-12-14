@@ -30,7 +30,7 @@ const ReviewsSection = () => {
 
     useEffect(() => {
         fetchReviews();
-    }, []);
+    }, [fetchReviews]);
 
     // Handle Input Change
     const handleChange = (e) => {
