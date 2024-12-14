@@ -1,61 +1,67 @@
 /* Contact.css */
 .contact-container {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #6c63ff 0%, #3f3f5f 100%);
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #4c5c96, #2b3548);
   color: white;
   text-align: center;
 }
 
 .contact-title {
   font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #f8f9fa;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact-description {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.6;
   margin: 0 auto 40px;
-  opacity: 0.9;
+  max-width: 600px;
+  color: #d1d5db;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
-  gap: 20px; /* Use gap for spacing between items */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .contact-info-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   padding: 20px;
-  width: 250px; /* Consistent width for each item */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  transition: all 0.3s ease;
+  width: 260px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .contact-icon {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #f8f9fa;
+  margin-bottom: 15px;
 }
 
 .contact-form-container {
   max-width: 600px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background: white;
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+  text-align: left;
 }
 
 .form-group {
@@ -63,73 +69,99 @@
 }
 
 label {
-  font-size: 1rem;
-  color: #2c2c54;
   display: block;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4c5c96;
+  margin-bottom: 8px;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
   color: #333;
-  transition: border-color 0.3s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #6c63ff;
+  border-color: #4c5c96;
+  box-shadow: 0 0 8px rgba(76, 92, 150, 0.4);
   outline: none;
 }
 
 textarea {
-  resize: none;
+  resize: vertical;
 }
 
 .btn {
+  display: inline-block;
+  width: 100%;
   padding: 14px 32px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 25px;
-  background-color: #6c63ff;
+  background: #4c5c96;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #9997b8;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: #3c4b78;
+  box-shadow: 0 8px 15px rgba(76, 92, 150, 0.4);
+}
+
+.success-message,
+.error-message {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.success-message {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.error-message {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
 }
 
 @media (max-width: 768px) {
-  .contact-title {
-    font-size: 2.5rem;
-  }
-
   .contact-info {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
   }
 
   .contact-info-item {
     width: 100%;
-    margin: 10px 0;
   }
 
-  .contact-form-container {
-    padding: 30px;
+  .btn {
+    padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .contact-description {
@@ -137,7 +169,7 @@ textarea {
   }
 
   .btn {
-    padding: 12px 24px;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }

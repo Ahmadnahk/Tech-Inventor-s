@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import { client } from '../SanityClient'; 
+import { db } from '../Firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -20,23 +21,26 @@ const Contact = () => {
         setErrorMessage('');
 
         try {
-            
-           let data = await client.create({
-                _type: 'contact',         
+            await addDoc(collection(db, 'contacts'), {
                 name: formData.name,
                 email: formData.email,
                 message: formData.message,
-                submittedAt: new Date().toISOString(), 
-           });
-            
-            console.log(data);
+                submittedAt: new Date().toLocaleString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric', 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit', 
+                    hour12: true 
+                }),
+            });
 
-            
             setIsSubmitted(true);
-            setFormData({ name: '', email: '', message: '' }); 
+            setFormData({ name: '', email: '', message: '' });
         } catch (error) {
-            setErrorMessage('Error submitting the form. Please try again.');
-            console.error('Sanity submission error:', error);
+            console.error('Firebase submission error:', error);
+            setErrorMessage('Something went wrong. Please try again later.');
         } finally {
             setIsSubmitting(false);
         }
@@ -44,9 +48,9 @@ const Contact = () => {
 
     return (
         <div className="contact-container" id="contact">
-            <h2 className="contact-title">Get in Touch</h2>
+            <h2 className="contact-title">Contact Us</h2>
             <p className="contact-description">
-                We’d love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.
+                Have questions or feedback? Fill out the form below, and we’ll respond as soon as possible.
             </p>
             <div className="contact-info">
                 <div className="contact-info-item">
@@ -67,7 +71,11 @@ const Contact = () => {
             </div>
             <div className="contact-form-container">
                 {isSubmitted ? (
-                    <p className="success-message">Thank you for your message! We'll get back to you soon.</p>
+                    <div className="success-message">
+                        <h3>Thank You!</h3>
+                        <p>Your message has been successfully sent. We’ll get back to you shortly!</p>
+                        <button onClick={() => setIsSubmitted(false)} className="btn">Send Another Message</button>
+                    </div>
                 ) : (
                     <form className="contact-form" onSubmit={handleSubmit}>
                         <div className="form-group">
@@ -76,6 +84,7 @@ const Contact = () => {
                                 type="text"
                                 id="name"
                                 name="name"
+                                placeholder="Enter your name"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -87,6 +96,7 @@ const Contact = () => {
                                 type="email"
                                 id="email"
                                 name="email"
+                                placeholder="Enter your email"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
@@ -97,6 +107,7 @@ const Contact = () => {
                             <textarea
                                 id="message"
                                 name="message"
+                                placeholder="Write your message here"
                                 rows="5"
                                 value={formData.message}
                                 onChange={handleChange}

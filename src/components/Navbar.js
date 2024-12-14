@@ -62,6 +62,17 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item">
                         <Link
+                            to="reviews"
+                            className="nav-links"
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}
+                        >
+                            Reviews
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
                             to="about"
                             className="nav-links"
                             smooth={true}
