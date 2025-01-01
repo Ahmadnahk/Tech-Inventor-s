@@ -56,12 +56,12 @@ const Contact = () => {
                 <div className="contact-info-item">
                     <FaMapMarkerAlt className="contact-icon" />
                     <h4>Our Location</h4>
-                    <p>Rawalpindi, Islamabad Stadium Road</p>
+                    <p>I-8 Markaz Islamabad, Pakistan</p>
                 </div>
                 <div className="contact-info-item">
                     <FaPhoneAlt className="contact-icon" />
                     <h4>Call Us</h4>
-                    <p>+92 322 944 783 4</p>
+                    <p>+923229447834 | +923345859589</p>
                 </div>
                 <div className="contact-info-item">
                     <FaEnvelope className="contact-icon" />
